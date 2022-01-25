@@ -71,5 +71,22 @@ public class F_GetMethod {
     }
 
 
+    //błedna metoda
+    @Test
+    public void calculateGetInfo(){
+        String endpoint = "/cocart/v1/calculate";
+
+        JSONObject bodyRequest = new JSONObject();
+        bodyRequest.put("return", true);
+
+        Response response = serviceHelper.sendPostRequest(bodyRequest.toString(), endpoint);
+        response.getBody().prettyPrint();
+
+        //response
+
+
+    }
+
+
 
 }
